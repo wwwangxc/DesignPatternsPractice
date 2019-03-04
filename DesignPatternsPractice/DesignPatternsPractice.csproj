@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{16976E49-D3D6-48E5-94C8-642148BED931}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>DesignPatternsPractice</RootNamespace>
+    <AssemblyName>DesignPatternsPractice</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Core.4.3.1\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="1- 创建型模式\2-抽象工厂（Abstract Factory）\CommonFactory.cs" />
+    <Compile Include="1- 创建型模式\2-抽象工厂（Abstract Factory）\IFactory.cs" />
+    <Compile Include="1- 创建型模式\2-抽象工厂（Abstract Factory）\LogitechFactory.cs" />
+    <Compile Include="1- 创建型模式\2-抽象工厂（Abstract Factory）\RazeFactory.cs" />
+    <Compile Include="1- 创建型模式\3-生成器（Builder）\IKitBuilder.cs" />
+    <Compile Include="1- 创建型模式\4-原型（Prototype）\PrototypeManager.cs" />
+    <Compile Include="1- 创建型模式\5-单件（Singleton）\SingletonA.cs" />
+    <Compile Include="1- 创建型模式\5-单件（Singleton）\SingletonB.cs" />
+    <Compile Include="1- 创建型模式\Kit.cs" />
+    <Compile Include="1- 创建型模式\3-生成器（Builder）\KitDirector.cs" />
+    <Compile Include="1- 创建型模式\3-生成器（Builder）\LogitechKitBuilder.cs" />
+    <Compile Include="1- 创建型模式\3-生成器（Builder）\RazeKitBuilder.cs" />
+    <Compile Include="1- 创建型模式\IKeyBoard.cs" />
+    <Compile Include="1- 创建型模式\IMouse.cs" />
+    <Compile Include="1- 创建型模式\1-工厂方法（Factory Method）\工厂\IMouseFactory.cs" />
+    <Compile Include="1- 创建型模式\LogitechKeyboard.cs" />
+    <Compile Include="1- 创建型模式\LogitechMouse.cs" />
+    <Compile Include="1- 创建型模式\1-工厂方法（Factory Method）\工厂\LogitechMouseFactory.cs" />
+    <Compile Include="1- 创建型模式\1-工厂方法（Factory Method）\简单工厂\MouseBrandConst.cs" />
+    <Compile Include="1- 创建型模式\1-工厂方法（Factory Method）\简单工厂\MouseFactory.cs" />
+    <Compile Include="1- 创建型模式\RazeKeyboard.cs" />
+    <Compile Include="1- 创建型模式\RazeMouse.cs" />
+    <Compile Include="1- 创建型模式\1-工厂方法（Factory Method）\工厂\RazeMouseFactory.cs" />
+    <Compile Include="1- 创建型模式\5-单件（Singleton）\SingletonC.cs" />
+    <Compile Include="2- 结构型模式\1-适配器（Adapter）\FileParse.cs" />
+    <Compile Include="2- 结构型模式\1-适配器（Adapter）\IFileParseService.cs" />
+    <Compile Include="2- 结构型模式\1-适配器（Adapter）\IFileParseTool.cs" />
+    <Compile Include="2- 结构型模式\1-适配器（Adapter）\SqlFileParse.cs" />
+    <Compile Include="2- 结构型模式\1-适配器（Adapter）\SqlFileParseTool.cs" />
+    <Compile Include="2- 结构型模式\1-适配器（Adapter）\TxtFileParse.cs" />
+    <Compile Include="2- 结构型模式\1-适配器（Adapter）\XmlFileParse.cs" />
+    <Compile Include="2- 结构型模式\1-适配器（Adapter）\XmlFileParseTool.cs" />
+    <Compile Include="2- 结构型模式\2-桥接（Bridge）\IBrand.cs" />
+    <Compile Include="2- 结构型模式\2-桥接（Bridge）\IProduct.cs" />
+    <Compile Include="2- 结构型模式\2-桥接（Bridge）\Logitech.cs" />
+    <Compile Include="2- 结构型模式\2-桥接（Bridge）\Mouse.cs" />
+    <Compile Include="2- 结构型模式\2-桥接（Bridge）\Raze.cs" />
+    <Compile Include="2- 结构型模式\2-桥接（Bridge）\KeyBoard.cs" />
+    <Compile Include="2- 结构型模式\3-组合（Composite）\Folder.cs" />
+    <Compile Include="2- 结构型模式\3-组合（Composite）\IFile.cs" />
+    <Compile Include="2- 结构型模式\3-组合（Composite）\Png.cs" />
+    <Compile Include="2- 结构型模式\3-组合（Composite）\Txt.cs" />
+    <Compile Include="2- 结构型模式\4-装饰（Decorator）\Clothes.cs" />
+    <Compile Include="2- 结构型模式\4-装饰（Decorator）\Component.cs" />
+    <Compile Include="2- 结构型模式\4-装饰（Decorator）\Decorator.cs" />
+    <Compile Include="2- 结构型模式\4-装饰（Decorator）\Human.cs" />
+    <Compile Include="2- 结构型模式\4-装饰（Decorator）\Shoe.cs" />
+    <Compile Include="2- 结构型模式\4-装饰（Decorator）\Trouser.cs" />
+    <Compile Include="2- 结构型模式\5-外观（Facade）\AppA.cs" />
+    <Compile Include="2- 结构型模式\5-外观（Facade）\AppB.cs" />
+    <Compile Include="2- 结构型模式\5-外观（Facade）\AppStoreFacade.cs" />
+    <Compile Include="2- 结构型模式\6-享元（Flyweight）\Circle.cs" />
+    <Compile Include="2- 结构型模式\6-享元（Flyweight）\FlyweightFactory.cs" />
+    <Compile Include="2- 结构型模式\6-享元（Flyweight）\IShape.cs" />
+    <Compile Include="2- 结构型模式\6-享元（Flyweight）\Rectangle.cs" />
+    <Compile Include="2- 结构型模式\6-享元（Flyweight）\ShapeComposite.cs" />
+    <Compile Include="2- 结构型模式\7-代理（Proxy）\动态代理\Castle\ClassInterceptor.cs" />
+    <Compile Include="2- 结构型模式\7-代理（Proxy）\HouseA.cs" />
+    <Compile Include="2- 结构型模式\7-代理（Proxy）\HouseB.cs" />
+    <Compile Include="2- 结构型模式\7-代理（Proxy）\动态代理\Remoting\DynamicAction.cs" />
+    <Compile Include="2- 结构型模式\7-代理（Proxy）\动态代理\Remoting\DynamicProxy.cs" />
+    <Compile Include="2- 结构型模式\7-代理（Proxy）\动态代理\Remoting\ProxyFactory.cs" />
+    <Compile Include="2- 结构型模式\7-代理（Proxy）\静态代理\HouseProxy.cs" />
+    <Compile Include="2- 结构型模式\7-代理（Proxy）\IHouse.cs" />
+    <Compile Include="3- 行为模式\1-职责链（Chain Of Responsibility）\DebugLogger.cs" />
+    <Compile Include="3- 行为模式\1-职责链（Chain Of Responsibility）\ErrorLogger.cs" />
+    <Compile Include="3- 行为模式\1-职责链（Chain Of Responsibility）\ILoggerHandler.cs" />
+    <Compile Include="3- 行为模式\1-职责链（Chain Of Responsibility）\InfoLogger.cs" />
+    <Compile Include="3- 行为模式\1-职责链（Chain Of Responsibility）\LogLevelEmun.cs" />
+    <Compile Include="3- 行为模式\1-职责链（Chain Of Responsibility）\WarnLogger.cs" />
+    <Compile Include="3- 行为模式\11-访问者（Visitor）\FolderSumVisitor.cs" />
+    <Compile Include="3- 行为模式\11-访问者（Visitor）\PngSumVisitor.cs" />
+    <Compile Include="3- 行为模式\11-访问者（Visitor）\IFileVisitor.cs" />
+    <Compile Include="3- 行为模式\11-访问者（Visitor）\TxtNameVisitor.cs" />
+    <Compile Include="3- 行为模式\2-命令（Command）\AcCloseCommand.cs" />
+    <Compile Include="3- 行为模式\2-命令（Command）\AcOpenCommand.cs" />
+    <Compile Include="3- 行为模式\2-命令（Command）\AirConditioner.cs" />
+    <Compile Include="3- 行为模式\2-命令（Command）\Button.cs" />
+    <Compile Include="3- 行为模式\2-命令（Command）\ICommand.cs" />
+    <Compile Include="3- 行为模式\2-命令（Command）\MacorCommand.cs" />
+    <Compile Include="3- 行为模式\2-命令（Command）\Television.cs" />
+    <Compile Include="3- 行为模式\2-命令（Command）\TvCloseCommand.cs" />
+    <Compile Include="3- 行为模式\2-命令（Command）\TvOpenCommand.cs" />
+    <Compile Include="3- 行为模式\3-解释器（Interpreter）\DivisionExpression.cs" />
+    <Compile Include="3- 行为模式\3-解释器（Interpreter）\IExpression.cs" />
+    <Compile Include="3- 行为模式\3-解释器（Interpreter）\OperationInterpreter.cs" />
+    <Compile Include="3- 行为模式\3-解释器（Interpreter）\MinusExpression.cs" />
+    <Compile Include="3- 行为模式\3-解释器（Interpreter）\MultiplicationExpression.cs" />
+    <Compile Include="3- 行为模式\3-解释器（Interpreter）\PlusExpression.cs" />
+    <Compile Include="3- 行为模式\3-解释器（Interpreter）\ValueExpression.cs" />
+    <Compile Include="3- 行为模式\4-迭代器（Iterator）\Aggregate.cs" />
+    <Compile Include="3- 行为模式\4-迭代器（Iterator）\ConcreteAggregate.cs" />
+    <Compile Include="3- 行为模式\4-迭代器（Iterator）\ConcreteIterator.cs" />
+    <Compile Include="3- 行为模式\4-迭代器（Iterator）\ForeachDemo.cs" />
+    <Compile Include="3- 行为模式\4-迭代器（Iterator）\Iterator.cs" />
+    <Compile Include="3- 行为模式\5-中介者（Mediator）\ColleagueA.cs" />
+    <Compile Include="3- 行为模式\5-中介者（Mediator）\ColleagueB.cs" />
+    <Compile Include="3- 行为模式\5-中介者（Mediator）\ColleagueC.cs" />
+    <Compile Include="3- 行为模式\5-中介者（Mediator）\ColleagueD.cs" />
+    <Compile Include="3- 行为模式\5-中介者（Mediator）\Mediator.cs" />
+    <Compile Include="3- 行为模式\6-备忘录（Memento）\Caretaker.cs" />
+    <Compile Include="3- 行为模式\6-备忘录（Memento）\ChangeStateCommand.cs" />
+    <Compile Include="3- 行为模式\6-备忘录（Memento）\IMemento.cs" />
+    <Compile Include="3- 行为模式\6-备忘录（Memento）\Originator.cs" />
+    <Compile Include="3- 行为模式\7-观察者（OBServer）\FansA.cs" />
+    <Compile Include="3- 行为模式\7-观察者（OBServer）\FansB.cs" />
+    <Compile Include="3- 行为模式\7-观察者（OBServer）\IFans.cs" />
+    <Compile Include="3- 行为模式\7-观察者（OBServer）\Star.cs" />
+    <Compile Include="3- 行为模式\8-状态（State）\CloseDoorState.cs" />
+    <Compile Include="3- 行为模式\8-状态（State）\IState.cs" />
+    <Compile Include="3- 行为模式\8-状态（State）\OpenDoorState.cs" />
+    <Compile Include="3- 行为模式\8-状态（State）\RunState.cs" />
+    <Compile Include="3- 行为模式\8-状态（State）\StopState.cs" />
+    <Compile Include="3- 行为模式\8-状态（State）\Train.cs" />
+    <Compile Include="3- 行为模式\8-状态（State）\TrainStateFactory.cs" />
+    <Compile Include="3- 行为模式\9-策略（Strategy）\ExactAndCaseInsensitiveSearchStrategy.cs" />
+    <Compile Include="3- 行为模式\9-策略（Strategy）\ExactSearchStrategy.cs" />
+    <Compile Include="3- 行为模式\9-策略（Strategy）\FuzzyAndCaseInsensitiveSearchStrategy.cs" />
+    <Compile Include="3- 行为模式\9-策略（Strategy）\FuzzySearchStrategy.cs" />
+    <Compile Include="3- 行为模式\9-策略（Strategy）\IStrategy.cs" />
+    <Compile Include="3- 行为模式\9-策略（Strategy）\SearchContext.cs" />
+    <Compile Include="3- 行为模式\10-模板方法（Template Method）\Americano.cs" />
+    <Compile Include="3- 行为模式\10-模板方法（Template Method）\CoffeTemplate.cs" />
+    <Compile Include="3- 行为模式\10-模板方法（Template Method）\Espresso.cs" />
+    <Compile Include="3- 行为模式\10-模板方法（Template Method）\Latte.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="1- 创建型模式\1-工厂方法（Factory Method）\工厂\类图\Factory.png" />
+    <Content Include="1- 创建型模式\1-工厂方法（Factory Method）\简单工厂\类图\SimpleFactory.png" />
+    <Content Include="1- 创建型模式\2-抽象工厂（Abstract Factory）\类图\AbstractFactory_1.png" />
+    <Content Include="1- 创建型模式\2-抽象工厂（Abstract Factory）\类图\AbstractFactory_2.png" />
+    <Content Include="1- 创建型模式\2-抽象工厂（Abstract Factory）\类图\AbstractFactory_3.png" />
+    <Content Include="1- 创建型模式\2-抽象工厂（Abstract Factory）\类图\AbstractFactory_4.png" />
+    <Content Include="1- 创建型模式\3-生成器（Builder）\类图\Builder_1.png" />
+    <Content Include="1- 创建型模式\3-生成器（Builder）\类图\Builder_2.png" />
+    <Content Include="1- 创建型模式\3-生成器（Builder）\类图\Builder_3.png" />
+    <Content Include="1- 创建型模式\3-生成器（Builder）\类图\Builder_4.png" />
+    <Content Include="1- 创建型模式\4-原型（Prototype）\类图\Prototype_1.png" />
+    <Content Include="1- 创建型模式\4-原型（Prototype）\类图\Prototype_2.png" />
+    <Content Include="1- 创建型模式\4-原型（Prototype）\类图\Prototype_3.png" />
+    <Content Include="1- 创建型模式\5-单件（Singleton）\类图\Singleton_1.png" />
+    <Content Include="2- 结构型模式\1-适配器（Adapter）\类图\Adapter_1.png" />
+    <Content Include="2- 结构型模式\1-适配器（Adapter）\类图\Adapter_2.png" />
+    <Content Include="2- 结构型模式\1-适配器（Adapter）\类图\Adapter_3.png" />
+    <Content Include="2- 结构型模式\1-适配器（Adapter）\类图\Adapter_4.png" />
+    <Content Include="2- 结构型模式\1-适配器（Adapter）\类图\Adapter_5.png" />
+    <Content Include="2- 结构型模式\2-桥接（Bridge）\类图\Bridge_1.png" />
+    <Content Include="2- 结构型模式\2-桥接（Bridge）\类图\Bridge_2.png" />
+    <Content Include="2- 结构型模式\3-组合（Composite）\类图\Compsite_1.png" />
+    <Content Include="2- 结构型模式\3-组合（Composite）\类图\Compsite_2.png" />
+    <Content Include="2- 结构型模式\4-装饰（Decorator）\类图\Decorator_1.png" />
+    <Content Include="2- 结构型模式\4-装饰（Decorator）\类图\Decorator_2.png" />
+    <Content Include="2- 结构型模式\5-外观（Facade）\类图\Facade_1.png" />
+    <Content Include="2- 结构型模式\5-外观（Facade）\类图\Facade_2.png" />
+    <Content Include="2- 结构型模式\6-享元（Flyweight）\类图\Flyweight_1.png" />
+    <Content Include="2- 结构型模式\6-享元（Flyweight）\类图\Flyweight_2.png" />
+    <Content Include="2- 结构型模式\6-享元（Flyweight）\类图\Flyweight_3.png" />
+    <Content Include="2- 结构型模式\7-代理（Proxy）\类图\Proxy_1.png" />
+    <Content Include="2- 结构型模式\7-代理（Proxy）\类图\Proxy_2.png" />
+    <Content Include="2- 结构型模式\7-代理（Proxy）\类图\Proxy_3.png" />
+    <Content Include="3- 行为模式\1-职责链（Chain Of Responsibility）\类图\ChainOfREsponsibility_1.png" />
+    <Content Include="3- 行为模式\1-职责链（Chain Of Responsibility）\类图\ChainOfREsponsibility_2.png" />
+    <Content Include="3- 行为模式\11-访问者（Visitor）\类图\Visitor_1.png" />
+    <Content Include="3- 行为模式\11-访问者（Visitor）\类图\Visitor_2.png" />
+    <Content Include="3- 行为模式\2-命令（Command）\类图\Connand_1.png" />
+    <Content Include="3- 行为模式\2-命令（Command）\类图\Connand_2.png" />
+    <Content Include="3- 行为模式\2-命令（Command）\类图\Connand_3.png" />
+    <Content Include="3- 行为模式\3-解释器（Interpreter）\类图\Interpreter_1.png" />
+    <Content Include="3- 行为模式\3-解释器（Interpreter）\类图\Interpreter_2.png" />
+    <Content Include="3- 行为模式\3-解释器（Interpreter）\类图\Interpreter_3.png" />
+    <Content Include="3- 行为模式\4-迭代器（Iterator）\类图\Interator_1.png" />
+    <Content Include="3- 行为模式\4-迭代器（Iterator）\类图\Interator_2.png" />
+    <Content Include="3- 行为模式\5-中介者（Mediator）\类图\Mediator_1.png" />
+    <Content Include="3- 行为模式\5-中介者（Mediator）\类图\Mediator_2.png" />
+    <Content Include="3- 行为模式\6-备忘录（Memento）\类图\Memento_1.png" />
+    <Content Include="3- 行为模式\6-备忘录（Memento）\类图\Memento_2.png" />
+    <Content Include="3- 行为模式\7-观察者（OBServer）\类图\OBServer_1.png" />
+    <Content Include="3- 行为模式\7-观察者（OBServer）\类图\OBServer_2.png" />
+    <Content Include="3- 行为模式\8-状态（State）\类图\State_1.png" />
+    <Content Include="3- 行为模式\8-状态（State）\类图\State_2.png" />
+    <Content Include="3- 行为模式\9-策略（Strategy）\类图\Strategy_1.png" />
+    <Content Include="3- 行为模式\9-策略（Strategy）\类图\Strategy_2.png" />
+    <Content Include="3- 行为模式\9-策略（Strategy）\类图\Strategy_3.png" />
+    <Content Include="3- 行为模式\10-模板方法（Template Method）\类图\TemplateMethod_1.png" />
+    <Content Include="3- 行为模式\10-模板方法（Template Method）\类图\TemplateMethod_2.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
